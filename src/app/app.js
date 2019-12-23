@@ -1,7 +1,7 @@
 // Special Debug Console Calls!
 win.log = console.log.bind(console);
 win.debug = function () {
-    var params = Array.prototype.slice.call(arguments, 1);
+    var params = Array.prototype.slice.call(arguments, 1);  
     params.unshift('%c[%cDEBUG%c] %c' + arguments[0], 'color: black;', 'color: green;', 'color: black;', 'color: blue;');
     console.debug.apply(console, params);
 };
